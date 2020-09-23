@@ -20,8 +20,7 @@ Um dieses Repository in MakeCode zu bearbeiten.
 
 ## Blockvorschau
 
-Dieses Bild zeigt den Blockcode vom letzten Commit im Master an.
-Die Aktualisierung dieses Bildes kann einige Minuten dauern.
+Dieses Bild zeigt den Blockcode "Schere-Stein-Papier" an.
 
 ![Eine gerenderte Ansicht der Blöcke](https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/Schere_Stein_Papier.png)
 
