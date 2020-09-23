@@ -10,7 +10,7 @@ können in den Python-Editor des Microsoft-MakeCode [Link](https://makecode.call
 
 Dieses Bild zeigt den Pythoncode "Schere-Stein-Papier" an.
 
-![image](https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/Python.png
+![image](https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/Python.png)
 
 ## Block-Vorschau
 
