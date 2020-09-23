@@ -1,5 +1,5 @@
 
-> Diese Seite bei [https://frankyhub.github.io/calliope-makecode/](https://frankyhub.github.io/calliope-makecode/) öffnen
+> Diese Seite bei [https://frankyhub.github/calliope-makecode/](https://frankyhub.github.io/calliope-makecode/) öffnen
 
 ## Als Erweiterung verwenden
 
