@@ -23,7 +23,7 @@ Um dieses Repository in MakeCode zu bearbeiten.
 Dieses Bild zeigt den Blockcode vom letzten Commit im Master an.
 Die Aktualisierung dieses Bildes kann einige Minuten dauern.
 
-![Eine gerenderte Ansicht der Blöcke](https://github.com/frankyhub/calliope-makecode/raw/master/.github/makecode/blocks.png)
+![Eine gerenderte Ansicht der Blöcke](https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/Schere_Stein_Papier.png)
 
 #### Metadaten (verwendet für Suche, Rendering)
 
