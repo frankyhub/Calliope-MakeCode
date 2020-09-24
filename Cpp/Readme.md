@@ -1,4 +1,4 @@
-## CPP-Dateien für Open Roberta
+## CPP und HEX-Dateien für Open Roberta
 
 - Die CPP-Dateien im Quellcode Editor öffnen
 - oder die HEX-Dateien auf den Calliope laden
