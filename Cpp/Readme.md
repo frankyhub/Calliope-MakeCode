@@ -3,4 +3,4 @@
 - Die CPP-Dateien im Quellcode Editor öffnen
 - oder die HEX-Dateien auf den Calliope laden
 
-[Link Open Roberta](https://lab.open-roberta.org/)
+[Link zu Open Roberta](https://lab.open-roberta.org/)
