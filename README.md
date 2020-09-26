@@ -24,6 +24,6 @@ Dieses Bild zeigt den Blockcode "Schere-Stein-Papier" an.
 
 ## Open Roberta Quellcode Editor Vorschau
 
-Dieses Bild zeigt den C++ code "SeedLEDbar" an.
+Dieses Bild zeigt den C++ code [SeedLEDbar](https://github.com/frankyhub/Calliope-MakeCode/tree/master/Cpp/B13-SeedLEDbar) an.
 
 ![image](https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/NEPO_cpp.png)
