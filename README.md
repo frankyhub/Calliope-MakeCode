@@ -10,16 +10,20 @@ können in den Python-Editor des Microsoft-MakeCode [Link](https://makecode.call
 
 können in den Quellcode-Editor von Open Roberta [Link](https://lab.open-roberta.org/) kopiert werden.
 
-## Phyton-Vorschau
+## MakeCode Phyton-Vorschau
 
 Dieses Bild zeigt den Pythoncode "Schere-Stein-Papier" an.
 
 ![image](https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/Python.png)
 
-## Block-Vorschau
+## MakeCode Block-Vorschau
 
 Dieses Bild zeigt den Blockcode "Schere-Stein-Papier" an.
 
 ![image](https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/Schere_Stein_Papier.png)
 
+## Open Roberta Quellcode Editor Vorschau
 
+Dieses Bild zeigt den C++ code "SeedLEDbar" an.
+
+![image](https://https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/NEPO_cpp.png)
