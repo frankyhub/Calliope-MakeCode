@@ -26,4 +26,4 @@ Dieses Bild zeigt den Blockcode "Schere-Stein-Papier" an.
 
 Dieses Bild zeigt den C++ code "SeedLEDbar" an.
 
-![image](https://https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/NEPO_cpp.png)
+![image](https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/NEPO_cpp.png)
