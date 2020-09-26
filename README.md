@@ -6,6 +6,10 @@
 
 können in den Python-Editor des Microsoft-MakeCode [Link](https://makecode.calliope.cc/#editor) kopiert werden.
 
+- Die C++-Programme [Link](https://github.com/frankyhub/Calliope-MakeCode/tree/master/Cpp)
+
+können in den Quellcode-Editor von Open Roberta [Link](https://lab.open-roberta.org/) kopiert werden.
+
 ## Phyton-Vorschau
 
 Dieses Bild zeigt den Pythoncode "Schere-Stein-Papier" an.
