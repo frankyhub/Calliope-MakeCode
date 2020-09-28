@@ -2,13 +2,13 @@
 
 ## Mit Microsoft MakeCode arbeiten
 
-- Die Python-Programme [Link](https://github.com/frankyhub/Calliope-MakeCode/tree/master/Python)
+- Die [Python-Programme](https://github.com/frankyhub/Calliope-MakeCode/tree/master/Python)
 
 können in den Python-Editor des Microsoft-MakeCode [Link](https://makecode.calliope.cc/#editor) kopiert werden.
 
-- Die C++-Programme [Link](https://github.com/frankyhub/Calliope-MakeCode/tree/master/Cpp)
+- Die [C++-Programme](https://github.com/frankyhub/Calliope-MakeCode/tree/master/Cpp)
 
-können in den Quellcode-Editor von Open Roberta [Link](https://lab.open-roberta.org/) kopiert werden.
+können in den Quellcode-Editor von Open Roberta [Open Roberta](https://lab.open-roberta.org/) kopiert werden.
 
 ## MakeCode Phyton-Vorschau
 
