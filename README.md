@@ -12,9 +12,9 @@ können in den Quellcode-Editor von Open Roberta [Open Roberta](https://lab.open
 
 ## MakeCode Phyton-Vorschau
 
-Dieses Bild zeigt den Pythoncode [Schere-Stein-Papier](https://github.com/frankyhub/Calliope-MakeCode/tree/master/Python/B5-Schere-Stein-Papier) an.
+Dieses Bild zeigt den Pythoncode [Schere-Stein-Papier](https://github.com/frankyhub/png/blob/master/Schere_Stein_Papier.png) an.
 
-![image](https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/Python.png)
+![image](https://github.com/frankyhub/png/blob/master/Python.png)
 
 ## MakeCode Block-Vorschau
 
@@ -26,7 +26,7 @@ Dieses Bild zeigt den Blockcode "Schere-Stein-Papier" an.
 
 Dieses Bild zeigt den C++ code [SeedLEDbar](https://github.com/frankyhub/Calliope-MakeCode/tree/master/Cpp/B13-SeedLEDbar) an.
 
-![image](https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/NEPO_cpp.png)
+![image](https://github.com/frankyhub/png/blob/master/NEPO_cpp.png)
 
 ## Open Roberta Programm importieren
 
