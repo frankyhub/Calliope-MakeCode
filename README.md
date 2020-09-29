@@ -12,7 +12,7 @@ können in den Quellcode-Editor von Open Roberta [Open Roberta](https://lab.open
 
 ## MakeCode Phyton-Vorschau
 
-Dieses Bild zeigt den Pythoncode [Schere-Stein-Papier](https://github.com/frankyhub/png/blob/master/Schere_Stein_Papier.png) an.
+Dieses Bild zeigt den Pythoncode [Schere-Stein-Papier](https://github.com/frankyhub/Calliope-MakeCode/tree/master/Python/B5-Schere-Stein-Papier) an.
 
 ![image](https://github.com/frankyhub/png/blob/master/Python.png)
 
