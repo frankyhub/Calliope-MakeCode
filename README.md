@@ -20,7 +20,7 @@ Dieses Bild zeigt den Pythoncode [Schere-Stein-Papier](https://github.com/franky
 
 Dieses Bild zeigt den Blockcode "Schere-Stein-Papier" an.
 
-![image](https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/Schere_Stein_Papier.png)
+![image](https://github.com/frankyhub/png/blob/master/Schere_Stein_Papier.png)
 
 ## Open Roberta Quellcode Editor Vorschau
 
