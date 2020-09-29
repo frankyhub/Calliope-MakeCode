@@ -27,3 +27,9 @@ Dieses Bild zeigt den Blockcode "Schere-Stein-Papier" an.
 Dieses Bild zeigt den C++ code [SeedLEDbar](https://github.com/frankyhub/Calliope-MakeCode/tree/master/Cpp/B13-SeedLEDbar) an.
 
 ![image](https://github.com/frankyhub/Calliope-MakeCode/blob/master/image/NEPO_cpp.png)
+
+## Open Roberta Programm importieren
+
+Dieses Bild zeigt die  [Import-Funktion](https://github.com/frankyhub/Calliope-MakeCode/tree/master/xml bei Open Roberta) an.
+
+![image](https://github.com/frankyhub/png/blob/master/roberta_import.png)
