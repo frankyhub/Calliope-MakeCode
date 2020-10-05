@@ -1,6 +1,6 @@
 
 
-## Mit Microsoft MakeCode arbeiten
+## Microsoft MakeCode
 
 - Die [Python-Programme](https://github.com/frankyhub/Calliope-MakeCode/tree/master/Python)
 
@@ -10,19 +10,19 @@ können in den Python-Editor des Microsoft-MakeCode [Link](https://makecode.call
 
 können in den Quellcode-Editor von Open Roberta [Open Roberta](https://lab.open-roberta.org/) kopiert werden.
 
-## MakeCode Phyton-Vorschau
+## Microsoft MakeCode Phyton
 
 Dieses Bild zeigt den Pythoncode [Schere-Stein-Papier](https://github.com/frankyhub/Calliope-MakeCode/tree/master/Python/B5-Schere-Stein-Papier) an.
 
 ![image](https://github.com/frankyhub/png/blob/master/Python.png)
 
-## MakeCode Block-Vorschau
+## MakeCode Block
 
 Dieses Bild zeigt den Blockcode "Schere-Stein-Papier" an.
 
 ![image](https://github.com/frankyhub/png/blob/master/Schere_Stein_Papier.png)
 
-## Open Roberta Quellcode Editor Vorschau
+## Open Roberta Quellcode Editor
 
 Dieses Bild zeigt den C++ code [SeedLEDbar](https://github.com/frankyhub/Calliope-MakeCode/tree/master/Cpp/B13-SeedLEDbar) an.
 
