@@ -33,3 +33,13 @@ Dieses Bild zeigt den C++ code [SeedLEDbar](https://github.com/frankyhub/Calliop
 Dieses Bild zeigt die [Import-Funktion](https://github.com/frankyhub/Calliope-MakeCode/tree/master/xml) bei Open Roberta an.
 
 ![image](https://github.com/frankyhub/png/blob/master/roberta_import.png)
+
+# Links
+
+[Calliope_Dokumentation](https://calliope-mini.github.io/v10/)
+
+[Betrieb von 2 Motoren](https://calliopeminigsho.wordpress.com/technik/dualmotorbug/)
+
+
+
+
