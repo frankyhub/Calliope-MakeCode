@@ -1,0 +1,179 @@
+/*******************************************************************************
+
+ Project Name:      Camera_CJ_OV528.cprj
+ Required Libs's:   IntFunc_lib.cc
+ Files:             Camera_CJ_OV528.cc
+ Writer:            CCPRO-TEAM
+ Date:              06.05.2015
+ Function:          Easy to use Camera_CJ_OV528 library   V1.0
+
+ ------------------------------------------------------------------------------
+
+ Note:
+
+ http://www.seeedstudio.com/wiki/Grove_-_Serial_Camera_Kit
+
+*******************************************************************************/
+
+#define CAMERA_UART    1
+#define BUFFER_LEN     128
+#define PIC_PKT_LEN    128                  ' data length of each read, dont set this too big because ram is limited
+#define PIC_FMT_VGA    7
+#define PIC_FMT_CIF    5
+#define PIC_FMT_OCIF   3
+#define CAM_ADDR       0
+#define CAM_SERIAL     Serial
+#define PIC_FMT        PIC_FMT_VGA
+
+Dim sz,buffer(SERIAL_BUF(BUFFER_LEN,50)), Data_Buffer(BUFFER_LEN), Buffer_Index As Byte
+Dim Pic_array_write(BUFFER_LEN) As Byte
+
+/*------------------------------------------------------------------------------
+    CAMERA_INIT
+------------------------------------------------------------------------------*/
+Sub CAMERA_INIT()
+    Serial_Init_IRQ(CAMERA_UART,buffer,BUFFER_LEN,50,SR_8BIT Or SR_1STOP Or SR_NO_PAR,SR_BD115200)
+    CAMERA_SEND_COMMAND(0X0D,0X00,0X00,0X00,0X00)
+    AbsDelay(100)
+End Sub
+
+/*------------------------------------------------------------------------------
+    CAMERA_SIZE_BAUD_FRAM
+------------------------------------------------------------------------------*/
+Sub CAMERA_SIZE_BAUD_FRAM()
+
+        ' ---> Camera Config <---
+
+        ' set new baudrate and image size
+        CAMERA_CLEAR_UART_BUFFER()
+        'CAMERA_SEND_COMMAND(0X01,0X04,0X07,0X00,0X05) ' 320x240
+        CAMERA_SEND_COMMAND(0X01,0X00,0X07,0X00,PIC_FMT) ' VGA
+        AbsDelay(100)
+
+        ' SET FRAME SIZE
+        CAMERA_CLEAR_UART_BUFFER()
+        CAMERA_SEND_COMMAND(0x06,0x08,PIC_PKT_LEN And 0xff,(PIC_PKT_LEN>>8) And 0xff,0)
+        AbsDelay(100)
+End Sub
+
+/*------------------------------------------------------------------------------
+    CAMERA_SAVE_PIC
+------------------------------------------------------------------------------*/
+Sub GET_PIC()
+        ' GET PIC
+        CAMERA_CLEAR_UART_BUFFER()
+        CAMERA_SEND_COMMAND(0X05,0X00,0X0,0X00,0X00)
+        AbsDelay(100)
+
+        CAMERA_CLEAR_UART_BUFFER()
+        CAMERA_SEND_COMMAND(0X04,0X01,0X0,0X00,0X00)
+        AbsDelay(500)
+        CAMERA_CLEAR_UART_BUFFER()
+End Sub
+
+/*------------------------------------------------------------------------------
+    CAMERA_SAVE_PIC
+------------------------------------------------------------------------------*/
+Sub CAMERA_SAVE_PIC()
+
+    Dim pic_frame_cnt, offset_cnt, x_n As Integer
+    Dim input_cnt, not_full_pic, highbyte, lowbyte As Byte
+    not_full_pic=0
+    pic_frame_cnt=0
+
+Lab repeat_ack
+
+        CAMERA_CLEAR_UART_BUFFER()
+        highbyte=pic_frame_cnt And 0xff
+        lowbyte=(pic_frame_cnt>>8) And 0xff
+
+        CAMERA_SEND_COMMAND(0X0E,0X00,0X00,highbyte,lowbyte)
+        AbsDelay((PIC_PKT_LEN/10)*2)
+
+        input_cnt=0
+        offset_cnt=0
+        Buffer_Index=0
+
+        input_cnt=Serial_IRQ_Info(CAMERA_UART,RS232_FIFO_RECV)
+
+        Do While True
+            sz=Serial_ReadExt(CAMERA_UART)
+            Data_Buffer(Buffer_Index)=sz
+            Buffer_Index++
+            If Buffer_Index>input_cnt-1 Then
+               Exit
+            End If
+        End While
+
+        ' normaly data frame 1 to x
+        If Buffer_Index=PIC_PKT_LEN Then
+            ' cut first 4 Bytes and last Bytes
+            x_n=0
+            offset_cnt=0
+            For x_n=4 To PIC_PKT_LEN-3
+                Pic_array_write(offset_cnt)=Data_Buffer(x_n)
+                offset_cnt++
+            Next
+            SD_WRITE_BIN(Pic_array_write,PIC_PKT_LEN-6)
+            not_full_pic=0
+        Else
+            ' last frame is smaller the normaly PIC_PKT_LEN
+            offset_cnt=0
+            x_n=0
+            For x_n = 4 To Buffer_Index-3
+                Pic_array_write(offset_cnt)=Data_Buffer(x_n)
+                offset_cnt++
+            Next
+            SD_WRITE_BIN(Pic_array_write,offset_cnt-1)
+
+            CAMERA_SEND_COMMAND(0X0E,0X00,0X0,0XF0,0XF0)
+            not_full_pic=1
+
+            ' Close open file
+            SD_CLOSE_FILE()
+
+         End If
+
+        CAMERA_CLEAR_UART_BUFFER()
+        pic_frame_cnt++
+        Port_ToggleBit(PORT_LED1)
+
+        If not_full_pic=0 Then
+           Goto repeat_ack
+        End If
+        Port_WriteBit(PORT_LED1,0)
+
+        Msg_WriteInt(pic_frame_cnt)
+        Msg_WriteText(" Frames write To SD-Disk\r")
+
+End Sub
+
+/*------------------------------------------------------------------------------
+    CAMERA_SEND_COMMAND
+------------------------------------------------------------------------------*/
+Sub CAMERA_SEND_COMMAND(para1 As Byte, para2 As Byte, para3 As Byte, para4 As Byte, para5 As Byte)
+    Serial_Write(CAMERA_UART,0XAA)    ' default addr
+    Serial_Write(CAMERA_UART,para1)
+    Serial_Write(CAMERA_UART,para2)
+    Serial_Write(CAMERA_UART,para3)
+    Serial_Write(CAMERA_UART,para4)
+    Serial_Write(CAMERA_UART,para5)
+End Sub
+
+/*------------------------------------------------------------------------------
+    CAMERA_CLEAR_UART_BUFFER
+------------------------------------------------------------------------------*/
+Sub CAMERA_CLEAR_UART_BUFFER()
+
+    ' Clear Buffer
+    Dim i As Integer
+    For i = 0 To BUFFER_LEN-1
+        Data_Buffer(i)=0
+        Pic_array_write(i)=0
+        Serial_ReadExt(CAMERA_UART)
+    Next
+    Buffer_Index=0
+    Serial_Init_IRQ(CAMERA_UART,buffer,BUFFER_LEN,50,SR_8BIT Or SR_1STOP Or SR_NO_PAR,SR_BD115200)
+End Sub
+
+

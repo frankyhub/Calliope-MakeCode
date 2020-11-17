@@ -1,0 +1,162 @@
+/*******************************************************************************
+
+ Project Name:      Grove Sound Sensor.cprj
+ Required Libs's:   IntFunc_lib.cc
+ Files:             Grove Sound Sensor.cc
+ Writer:            CCPRO-TEAM
+ Date:              30.05.2015
+ Function:          Demonstrates the Grove Sound Sensor
+
+ ------------------------------------------------------------------------------
+ AVR32 Serie:
+ ------------
+ Required the C-Control PRO AVR32-Bit UNIT Conrad BN: 192573
+ Applicationboard Conrad BN: 192587
+ Or Mainboard Conrad BN: 192702
+
+ MEGA Serie:
+ -----------
+ Required the C-Control PRO MEGA32 UNIT Conrad BN: 198206
+ and Evalationboard Conrad BN: 198245
+ Or Projectboard Conrad BN: 197287
+
+ Or C-Control PRO MEGA128 UNIT Conrad BN: 198219
+ Or C-Control PRO MEGA128CAN Conrad BN: 197989
+ and Evaluationboard Conrad BN: 198258
+ or Projectboard Conrad BN: 197313
+
+ Input ADC0:
+ ------------
+ Mega32:  PA0 (PortA.0)
+ Mega128: PF0 (PortF.0)
+ AVR32:   P9
+
+ Connection:
+ -----------
+ - Connect the Sensor red wire to +5V (MEGA) or +3,3V (AVR32)
+ - Connect the Sensor black wire to GND
+ - Connect the Sensor yellow wire to C-Control ADC
+ - The white sensor wire is not connected
+
+ Start the program with F10 (or the yellow flash icon) for debug outputs!
+
+ ------------------------------------------------------------------------------
+
+ Note:
+ -----
+ Source: http://www.seeedstudio.com/depot/Grove-Sound-Sensor-p-752.html
+
+ The Sound sensor module is a simple microphone.
+ Based on the power amplifier LM386 and the electret microphone,
+ it can be used to detect the sound strength of the environment.
+ The value of output can be adjusted by the potentiometer.
+
+ Features:
+ ---------
+ * Grove compatible interface
+ * Wide supply voltage range: 4V-12V
+ * Low quiescent current drain: 4mA
+ * 2.0cm x 2.0cm twig module
+ * Minimum external parts
+
+ Applications Ideas:
+ -------------------
+ * Simple microphone
+ * Sound detection
+
+*******************************************************************************/
+
+
+/*------------------------------------------------------------------------------
+    Main program
+------------------------------------------------------------------------------*/
+void main(void)
+{
+    word ADC_Value;
+
+    #if AVR32
+        int result[8];
+        ADC_Disable();
+        ADC_SetInput(0, 0, ADC_GND, ADC_SHG_1);
+        ADC_Enable(ADC_MODE_12BIT|ADC_MODE_FREE_RUN, 1000000, ADC_ADCREF0, 1, 0);
+        ADC_Start();
+    #else
+        // MEGA Serie
+        ADC_Set(ADC_VREF_VCC, ADC0);                // Set Vref and ADC Channel
+    #endif
+
+
+    // Endless loop
+    while(1)
+    {
+      #ifdef AVR32
+         ADC_GetValues(result, 1);
+         ADC_Value=result[0];
+      #else
+        // MEGA Serie
+        ADC_Value=ADC_Read();                       // Read channel values
+      #endif
+
+      //Msg_WriteWord(ADC_Value);                   // Debug output of the sensor value
+      //Msg_WriteChar('\r');                        // Debug new line
+      AbsDelay(10);                                 // Shows the output slower
+
+      // Show a simple bargraph
+      if(ADC_Value<100)
+      {
+        Msg_WriteText("#\r");
+      }
+      else if(ADC_Value<200)
+      {
+        Msg_WriteText("##\r");
+      }
+      else if(ADC_Value<300)
+      {
+        Msg_WriteText("###\r");
+      }
+      else if(ADC_Value<400)
+      {
+        Msg_WriteText("####\r");
+      }
+      else if(ADC_Value<500)
+      {
+        Msg_WriteText("#####\r");
+      }
+      else if(ADC_Value<600)
+      {
+        Msg_WriteText("######\r");
+      }
+      else if(ADC_Value<700)
+      {
+        Msg_WriteText("#######\r");
+      }
+      else if(ADC_Value<800)
+      {
+        Msg_WriteText("########\r");
+      }
+      else if(ADC_Value<900)
+      {
+        Msg_WriteText("#########\r");
+      }
+      else if(ADC_Value<1000)
+      {
+        Msg_WriteText("##########\r");
+      }
+    }
+}
+
+/*******************************************************************************
+ * Info
+ *******************************************************************************
+ * Changelog:
+ * -
+ *
+ *******************************************************************************
+ * Bugs, feedback, questions and modifications can be posted on the
+ * C-Control Forum on http://www.c-control.de
+ * Of course you can also write us an e-mail to: webmaster@c-control.de
+ * We publish updates from time to time on www.c-control.de!
+/******************************************************************************/
+
+// EOF
+
