@@ -74,7 +74,7 @@ Dieses Bild zeigt die [Import-Funktion](https://github.com/frankyhub/Calliope-Ma
 |27| 2 Calliope verbinden, Smily send	  | OR    |       | **        |
 |28| Fahrzeugsteuerung - Sender		      | OR    |       | ***       |
 |29| Fahrzeugsteuerung - Empfänger	    | OR    |       | ***       |
-|30| Fahrzeug - Motosteuerung		        | OR    | Motor	| ***       |
+|30| Fahrzeug - Motorsteuerung	        | OR    | Motor	| ***       |
 |31| Hindernisserkennung 		            | OR    | Grove	| ****      |
 |32| Hindernisserkennung mit Warnung	  | OR    | Grove	| ****      |
 |33| Wetterstation			                | OR    | Grove	| *****     |
