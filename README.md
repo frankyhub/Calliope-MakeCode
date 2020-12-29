@@ -40,6 +40,43 @@ Dieses Bild zeigt die [Import-Funktion](https://github.com/frankyhub/Calliope-Ma
 
 [Betrieb von 2 Motoren](https://calliopeminigsho.wordpress.com/technik/dualmotorbug/)
 
+## Calliope Programmbeispiele
+
+	Callioppe Programme
+	
+1	Zeige Herz
+2	Würfel
+3	Daumenkino
+4	Keksdose offen?
+5	Personenzähler
+6	Personenzähler keine neg. Anzeige
+7	Personenzähler Zugang sperren
+8	Schere, Stein, Papier
+9	Schere, Stein, Papier, Brunnen
+10	Händewaschtimer
+11	Automatisches Rollerlicht
+12	Luftqualitäts-Anzeige
+13	Temperatur-Anzeige
+14	Raumluftüberwachung
+15	Temperatur-Anzeige mir LED-Balken
+14	Raumluftüberwachung
+15	Thermometer
+18	Alarmanlage
+19	Helligkeitsabhängiger Lüfter 
+20	Treppenhauslicht
+21	Wechselschalter
+22	Klatschschalter
+23	Spardose
+24	Zähler mit LED-Matrix Ansteurung
+25	Zähler mit LED-Matrix Erweiterung
+26	LED-Matrix Lauflicht
+27	2 Calliope verbinden, Smily senden
+28	Fahrzeugsteuerung - Sender
+29	Fahrzeugsteuerung - Empfänger
+30	Fahrzeug - Motosteuerung
+31	Hindernisserkennung 
+32	Hindernisserkennung mit Warnung
+33	Wetterstation
 
 
 
