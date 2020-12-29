@@ -41,10 +41,10 @@ Dieses Bild zeigt die [Import-Funktion](https://github.com/frankyhub/Calliope-Ma
 [Betrieb von 2 Motoren](https://calliopeminigsho.wordpress.com/technik/dualmotorbug/)
 
 
-## Callioppe Programm-Beispiele                                             
+## Calliope Programm-Beispiele                                             
 
 |Nr| Programm                           |Editor |Zubehör|Anforderung|
-|---------------------------------------|-------|-------|-----------|
+|--|------------------------------------|-------|-------|-----------|
 | 1| Zeige Herz	                  			| OR    |       | *         |
 | 2| Würfel			                       	| OR    |       | **        |
 | 3| Daumenkino		                  		| OR    |       | **        |
