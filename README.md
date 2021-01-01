@@ -36,6 +36,9 @@
 |32| Hindernisserkennung mit Warnung	  | OR    | Grove	| ****      |
 |33| Wetterstation			                | OR    | Grove	| *****     |
 
+## Link zum Workshop
+[Workshop I](https://github.com/frankyhub/Calliope/blob/master/PPT%20Workshop/Calliope%20WS%20I%20V1.pdf)
+
 
 ## Ein Programm in Open Roberta importieren
 
