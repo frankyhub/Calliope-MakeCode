@@ -32,9 +32,11 @@
 |28| Fahrzeugsteuerung - Sender		      | OR    |       | ***       |
 |29| Fahrzeugsteuerung - Empfänger	    | OR    |       | ***       |
 |30| Fahrzeug - Motorsteuerung	        | OR    | Motor	| ***       |
-|31| Hindernisserkennung 		            | OR    | Grove	| ****      |
-|32| Hindernisserkennung mit Warnung	  | OR    | Grove	| ****      |
-|33| Wetterstation			                | OR    | Grove	| *****     |
+|31| Fahrzeug - Linenverfolgung	        | OR    | Motor	| ***       |
+|32| Hindernisserkennung 		            | OR    | Grove	| ****      |
+|33| Hindernisserkennung mit Warnung	  | OR    | Grove	| ****      |
+|34| Fahrzeug - Hindernisserkennung     | OR    | Motor	| ***       |
+|35| Wetterstation			                | OR    | Grove	| *****     |
 
 ## Link zum Workshop
 [Workshop I](https://github.com/frankyhub/Calliope/blob/master/PPT%20Workshop/Calliope%20WS%20I%20V1.pdf)
